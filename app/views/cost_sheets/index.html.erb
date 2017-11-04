@@ -1,0 +1,14 @@
+<div class='cost-sheet-list'>
+  <% @cost_sheets.each do |cost_sheet| %>
+    <div class='cost-sheet'>
+      <%= link_to cost_sheet_path(cost_sheet) do %>
+        <%= cost_sheet.project_number %> <br>
+        <%= cost_sheet.customer_name %><br>
+        <%= cost_sheet.total %><br>
+      <% end %>
+    </div>
+    <br>
+  <% end %>
+
+  <%= link_to 'New Cost Sheet', new_cost_sheet_path %>
+</div>

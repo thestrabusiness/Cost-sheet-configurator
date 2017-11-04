@@ -1,0 +1,16 @@
+<h2>Cost Sheet</h2>
+<div class='cost-sheet-info'>
+  <%= @cost_sheet.project_number %> <br>
+  <%= @cost_sheet.customer_name %><br>
+  <%= @cost_sheet.total %><br>
+</div>
+<br>
+<h2>Configs</h2>
+<% @configs.each do |config| %>
+  <div class='config-container'>
+    <%= config.name %>
+    <%= config.total %>
+  </div>
+<% end %>
+
+<%= link_to 'Add new config', new_cost_sheet_config_path(@cost_sheet) %>
